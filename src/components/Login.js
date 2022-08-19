@@ -1,19 +1,12 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-export default class Login extends Component {
+const Login = ()=> {
+    const [state, setState] = useState({});
 
-    constructor(props) {
-        super(props);
-        this.state = {}
+    const changeHandler=(event)=>{
+        //console.log(event);
+        setState({...state, [event.target.name] : event.target.value})
     }
-
-    changeHandler=(event)=>{
-        console.log(event);
-        this.setState({[event.target.name] : event.target.value});
-        console.log(this.state);
-    }
-
-  render() {
     return (
         <div>
             <nav className="navbar navbar-default navbar-fixed">
@@ -56,11 +49,11 @@ export default class Login extends Component {
                                 <div className="content">
                                     
                                     <div className="row">
-                                        {/* {JSON.stringify(this.state)} */}
+                                        {/* {JSON.stringify(state)} */}
                                         <div className="col-md-5">
                                             <div className="form-group">
                                                 <label> Mobile No</label>
-                                                <input type="tel" className="form-control" placeholder="Mobile No" name="mobile_no" onChange={this.changeHandler} />
+                                                <input type="tel" className="form-control" placeholder="Mobile No" name="mobile_no" onChange={changeHandler} />
                                             </div>
                                         </div>
                                     </div>
@@ -68,7 +61,7 @@ export default class Login extends Component {
                                         <div className="col-md-5">
                                             <div className="form-group">
                                                 <label>Password</label>
-                                                <input type="password" className="form-control" name="password" placeholder="Password" onChange={this.changeHandler} />
+                                                <input type="password" className="form-control" name="password" placeholder="Password" onChange={changeHandler} />
                                             </div>
                                         </div>
                                     </div>
@@ -87,5 +80,7 @@ export default class Login extends Component {
 
         </div>
     )
-  }
+  
 }
+
+export default Login;

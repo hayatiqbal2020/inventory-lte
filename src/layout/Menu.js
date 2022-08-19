@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default class Menu extends Component {
-  render() {
+const Menu = ()=> {
+
     return (
         <div className="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
 
@@ -65,5 +65,6 @@ export default class Menu extends Component {
             </div>
       </div>
     )
-  }
+
 }
+export default Menu;

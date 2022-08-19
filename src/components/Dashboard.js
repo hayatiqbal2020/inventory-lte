@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Menu from '../layout/Menu';
 import Header from '../layout/Header';
 
-export default class Dashboard extends Component {
-  render() {
+const Dashboard =()=> {
+
     return (
       <div>
         <Menu />
@@ -12,5 +12,6 @@ export default class Dashboard extends Component {
         </div>
       </div>
     )
-  }
+
 }
+export default Dashboard;
