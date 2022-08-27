@@ -4,7 +4,7 @@ class Login extends Component {
 
     constructor(props){
         super(props);
-        this.state = {};
+        this.state = {num1: null, num2: null};
         this.changeHandler = this.changeHandler.bind(this);
     }
 
@@ -12,9 +12,9 @@ class Login extends Component {
         this.setState({
             [event.target.name]: parseFloat(event.target.value)
         });
-        
-        
+        console.log(this.state);    
     }
+
     render(){
         return (
             <div>
